@@ -1,0 +1,49 @@
+POST http://localhost:5000/todo/auth/register
+Content-Type: application/json
+
+{
+    "username":"mintu",
+    "password":"123456"
+}
+
+###
+
+POST http://localhost:5000/todo/auth/login 
+Content-Type:application/json
+
+{
+    "username":"mintu",
+    "password":"123456"
+}
+###
+
+POST http://localhost:5000/todo/todos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pbnR1IiwiaWF0IjoxNzIyNTgwNzgzfQ.COf_69WFQ5cXpDdxHW-ysTZTNP49tQ2sMdCnZYB_cw8
+
+{
+    "name":"Go To Movie",
+    "edit":"false",
+    "priority":"Low"
+}
+###
+
+GET http://localhost:5000/todo/todos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pbnR1IiwiaWF0IjoxNzIyNTgwNzgzfQ.COf_69WFQ5cXpDdxHW-ysTZTNP49tQ2sMdCnZYB_cw8
+
+###
+
+PUT http://localhost:5000/todo/todos/66ac7d77cdd32ec76d799125
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pbnR1IiwiaWF0IjoxNzIyNTgwNzgzfQ.COf_69WFQ5cXpDdxHW-ysTZTNP49tQ2sMdCnZYB_cw8
+
+{
+    "name":"Tharun",
+    "priority":"Medium"
+}
+
+###
+
+DELETE http://localhost:5000/todo/todos/66ac7e0ecdd32ec76d799139
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pbnR1IiwiaWF0IjoxNzIyNTgwNzgzfQ.COf_69WFQ5cXpDdxHW-ysTZTNP49tQ2sMdCnZYB_cw8
