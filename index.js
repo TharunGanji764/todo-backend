@@ -17,8 +17,8 @@ mongoose
     process.exit(1);
   });
 
-app.use("https://todo-backend-ee4y.onrender.com/todo/", todoRoutes);
-app.use("https://todo-backend-ee4y.onrender.com/todo/auth", userRoutes);
+app.use("/todo/", todoRoutes);
+app.use("/todo/auth", userRoutes);
 
 app.listen(5000, () => {
   console.log("Server running....");
